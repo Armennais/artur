@@ -18,7 +18,7 @@ app.use(express.json());
 
 app.post("/process", async (req, res) => {
   const task = req.body;
-
+  console.log("Test");
   try {
     const connection = await amqp.connect("amqp://127.0.0.1");
     const channel = await connection.createChannel();
